@@ -5,13 +5,12 @@ export default {
     try {
       const { data } = await service.fetchItems();
       console.log(data);
-      commit("setPosts", data);
+      commit("setItems", data);
     } catch (error) {
       console.log(error);
     }
   },
-
-  async fetchPost({ commit }, id) {
+  async fetchItem({ commit }, id) {
     try {
       const { data } = await service.fetchItem({ id });
       console.log(data);

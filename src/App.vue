@@ -44,7 +44,7 @@ export default {
       { icon: "mdi-home", title: "Home", link: "/home" },
       { icon: "mdi-login", title: "Login", link: "/login" },
       { icon: "mdi-account", title: "User", link: "/user" },
-      { icon: "mdi-post", title: "Post", link: "/post" },
+      { icon: "mdi-post", title: "Post", link: "/posts" },
     ]
   })
 };

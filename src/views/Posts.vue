@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import PostPage from "@/components/PostPage";
+import PostPage from "@/components/Posts/PostPage";
 
 export default {
   name: "Post",

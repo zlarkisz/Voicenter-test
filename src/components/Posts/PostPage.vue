@@ -1,5 +1,7 @@
 <template>
   <div>
+    <h1 class="text-center">Posts</h1>
+
     <v-card
       class="mx-auto mb-5"
       max-width="344"
@@ -11,9 +13,10 @@
       <v-list-item>
         <v-list-item-content>
           <v-list-item-title class="headline mb-1">{{ item.title }}</v-list-item-title>
-          <v-list-item-subtitle>{{ item.body }}</v-list-item-subtitle>
         </v-list-item-content>
       </v-list-item>
+
+      <v-card-text>{{ item.body }}</v-card-text>
     </v-card>
   </div>
 </template>
@@ -31,12 +34,12 @@ export default {
   methods: {
     ...mapActions("posts", ["fetchItems"]),
     openCard(item) {
-      console.log(item);
-      this.$router.push({ path: `/posts/${item.id}` });
+      const id = item.id;
+      this.$router.push(`/posts/${id}`);
     }
   },
 
-  async mounted() {
+  mounted() {
     this.fetchItems();
   }
 };
