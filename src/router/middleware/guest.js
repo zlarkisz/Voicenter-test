@@ -1,10 +1,10 @@
 export default function guest({ next, store }) {
-    console.log("guest")
-    if (store.getters.loggedIn) {
-        return next({
-            name: "posts"
-        })
-    }
+  console.log(Object.values(store.getters)[2].loggedIn);
+  if (Object.values(store.getters)[2].loggedIn) {
+    return next({
+      name: "posts"
+    });
+  }
 
-    return next()
+  return next();
 }

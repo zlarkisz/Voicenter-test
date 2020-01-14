@@ -1,10 +1,11 @@
 export default function auth({ next, store }) {
-    console.log("auth")
-    if (!store.getters.loggedIn) {
-        return next({
-            name: "login"
-        })
-    }
+  console.log(Object.values(store.getters)[2].loggedIn);
+  // console.log(store.getters['login/auth']);
+  if (!Object.values(store.getters)[2].loggedIn) {
+    return next({
+      name: "login"
+    });
+  }
 
-    return next()
+  return next();
 }
